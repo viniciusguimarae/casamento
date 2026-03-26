@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>O Casamento Inteligente — Organização e economia sem estresse</title>
+  <meta name="description" content="Um método prático para noivas reais organizarem cerimônias lindas, cortarem custos desnecessários e viverem o noivado com tranquilidade financeira." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    /* ============================================================
+       TOKENS DE DESIGN
+       ============================================================ */
+    :root {
+      --champagne:       #FAF7F2;
+      --warm-beige:      #F2EBE0;
+      --breath-gray:     #EDEDEC;
+      --muted-rose:      #EDE0DE;
+      --neutral-soft:    #F5F0EC;
+      --elegant-neutral: #E8DED8;
+      --dark-romantic:   #3A1B26;
+      --dark-deep:       #1C1410;
+      --wine:            #6B2D3E;
+      --rose-mid:        #9C6B73;
+      --gold:            #C9A84C;
+      --gold-light:      rgba(201,168,76,0.12);
+      --text-primary:    #2A2220;
+      --text-secondary:  #6B5E58;
+      --text-light:      #F2EBE0;
+      --text-muted:      rgba(242,235,224,0.55);
+
+      --hero-display:    clamp(2.4rem, 7vw, 4.2rem);
+      --h2:              clamp(1.5rem, 4vw, 2.2rem);
+      --h3:              clamp(1.15rem, 2.5vw, 1.5rem);
+      --body:            1rem;
+      --small:           0.85rem;
+      --micro:           0.72rem;
+
+      --serif:   'Cormorant Garamond', Georgia, serif;
+      --sans:    'Inter', system-ui, sans-serif;
+
+      --gap-xs:  8px;
+      --gap-sm:  16px;
+      --gap-md:  32px;
+      --gap-lg:  56px;
+      --gap-xl:  88px;
+      --gap-2xl: 120px;
+
+      --section-px-mobile: 24px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      font-size: var(--body);
+      color: var(--text-primary);
+      background-color: var(--champagne);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+
+    .container { width: 100%; max-width: 720px; margin: 0 auto; padding: 0 var(--section-px-mobile); }
+    .container--wide { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 var(--section-px-mobile); }
+    @media (min-width: 768px) { .container, .container--wide { padding: 0 40px; } }
+    @media (min-width: 1200px) { .container { padding: 0; } .container--wide { padding: 0 40px; } }
+
+    .hero-headline { font-family: var(--serif); font-size: var(--hero-display); font-weight: 600; line-height: 1.12; letter-spacing: -0.01em; color: var(--text-primary); }
+    .hero-headline em { font-style: italic; color: var(--wine); }
+    .section-headline { font-family: var(--serif); font-size: var(--h2); font-weight: 400; line-height: 1.25; letter-spacing: -0.01em; }
+    .section-headline--light { color: var(--text-light); }
+    .sub-headline { font-family: var(--sans); font-size: clamp(1rem, 2vw, 1.15rem); font-weight: 300; color: var(--text-secondary); line-height: 1.65; }
+    .sub-headline--light { color: rgba(242,235,224,0.70); }
+    .overline { font-family: var(--sans); font-size: var(--micro); font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--rose-mid); }
+    .overline--gold { color: var(--gold); }
+    .overline--light { color: rgba(201,168,76,0.7); }
+
+    section { width: 100%; }
+    .section-pad        { padding: 72px 0; }
+    .section-pad--hero  { padding: 80px 0 60px; }
+    .section-pad--tight { padding: 52px 0; }
+    .section-pad--breathe { padding: 96px 0; }
+    .section-pad--compress { padding: 60px 0; }
+
+    @media (min-width: 768px) {
+      .section-pad        { padding: 100px 0; }
+      .section-pad--hero  { padding: 110px 0 80px; }
+      .section-pad--tight { padding: 72px 0; }
+      .section-pad--breathe { padding: 140px 0; }
+      .section-pad--compress { padding: 80px 0; }
+    }
+
+    .bg-champagne       { background-color: var(--champagne); }
+    .bg-warm-beige      { background-color: var(--warm-beige); }
+    .bg-breath-gray     { background-color: var(--breath-gray); }
+    .bg-muted-rose      { background-color: var(--muted-rose); }
+    .bg-neutral-soft    { background-color: var(--neutral-soft); }
+    .bg-elegant-neutral { background-color: var(--elegant-neutral); }
+    .bg-dark-romantic   { background-color: var(--dark-romantic); }
+    .bg-dark-deep       { background-color: var(--dark-deep); }
+
+    .sp-xs  { height: var(--gap-xs); }
+    .sp-sm  { height: var(--gap-sm); }
+    .sp-md  { height: var(--gap-md); }
+    .sp-lg  { height: var(--gap-lg); }
+    .sp-xl  { height: var(--gap-xl); }
+
+    .ph-block { border: 1.5px dashed rgba(107,45,62,0.18); border-radius: 6px; padding: 18px 20px; background-color: rgba(107,45,62,0.03); font-family: var(--sans); font-size: 11.5px; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; color: rgba(107,45,62,0.30); line-height: 1.5; }
+    .ph-block--tall { min-height: 180px; display: flex; align-items: center; justify-content: center; text-align: center; }
+    .ph-block--card { min-height: 110px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px; }
+    .ph-block--image { min-height: 300px; display: flex; align-items: center; justify-content: center; text-align: center; color: rgba(107,45,62,0.5); }
+    .ph-block--image-portrait { min-height: 360px; display: flex; align-items: center; justify-content: center; text-align: center; }
+    .ph-block--line { min-height: 52px; display: block; padding: 16px 20px; line-height: 1.6; }
+
+    .ph-block--dark { border-color: rgba(242,235,224,0.15); background-color: rgba(242,235,224,0.04); color: rgba(242,235,224,0.70); font-weight: 400; text-transform: none; font-size: 15px; letter-spacing: normal; }
+    .ph-block--warning { border-color: rgba(201,168,76,0.25); background-color: rgba(201,168,76,0.06); color: rgba(201,168,76,0.9); font-weight: 400; text-transform: none; letter-spacing: normal; }
+    .ph-block--cta { border: none; background-color: var(--gold); color: #fff; min-height: 60px; font-size: 15px; font-weight: 600; border-radius: 4px; display: flex; align-items: center; justify-content: center; text-align: center; flex-wrap: wrap; padding: 12px 20px; line-height: 1.4; cursor: pointer; text-transform: uppercase; letter-spacing: 0.05em; box-shadow: 0 4px 14px rgba(201,168,76,0.3); }
+    .ph-block--cta-dark { border: none; background-color: var(--gold); color: #fff; min-height: 64px; font-size: 15px; font-weight: 600; border-radius: 4px; display: flex; align-items: center; justify-content: center; text-align: center; flex-wrap: wrap; padding: 12px 20px; line-height: 1.4; text-transform: uppercase; letter-spacing: 0.05em; cursor: pointer; box-shadow: 0 4px 14px rgba(201,168,76,0.2); }
+
+    .highlight-band { border-left: 3px solid var(--wine); padding: 14px 20px; background-color: rgba(107,45,62,0.06); border-radius: 0 4px 4px 0; }
+    .highlight-band--gold { border-left-color: var(--gold); background-color: rgba(201,168,76,0.07); }
+    .highlight-band--dark { border-left-color: var(--gold); background-color: rgba(201,168,76,0.06); }
+
+    .emotional-bullets { display: flex; flex-direction: column; gap: var(--gap-sm); }
+    .bullet-item { display: flex; align-items: flex-start; gap: 12px; padding: 14px 16px; background-color: rgba(107,45,62,0.04); border-radius: 4px; border-left: 2px solid rgba(107,45,62,0.15); }
+    .bullet-dot { width: 8px; height: 8px; border-radius: 50%; background-color: var(--rose-mid); flex-shrink: 0; margin-top: 6px; }
+    .bullet-text { font-size: 1.05rem; color: var(--text-secondary); line-height: 1.5; }
+
+    .pillar-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+    @media (min-width: 600px) { .pillar-grid { grid-template-columns: 1fr 1fr 1fr; } }
+    .pillar-card { padding: 24px 20px; background-color: rgba(255,255,255,0.55); border-radius: 8px; border: 1px solid rgba(107,45,62,0.10); display: flex; flex-direction: column; gap: 10px; }
+    .pillar-number { font-family: var(--serif); font-size: 2rem; font-weight: 300; color: rgba(107,45,62,0.25); line-height: 1; }
+    .pillar-title { font-weight: 600; font-size: 1.1rem; color: var(--wine); }
+    .pillar-desc { font-size: 0.95rem; color: var(--text-secondary); }
+
+    .founder-layout { display: flex; flex-direction: column; gap: var(--gap-lg); }
+    @media (min-width: 768px) { .founder-layout { flex-direction: row; align-items: flex-start; gap: var(--gap-xl); } .founder-portrait { flex: 0 0 260px; } .founder-narrative { flex: 1; } }
+
+    .authority-rail { display: flex; gap: 14px; overflow-x: auto; padding-bottom: 8px; -ms-overflow-style: none; scrollbar-width: none; }
+    .authority-rail::-webkit-scrollbar { display: none; }
+    .authority-chip { flex-shrink: 0; min-width: 160px; height: 72px; background-color: rgba(255,255,255,0.70); border: 1px solid rgba(107,45,62,0.15); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-family: var(--sans); font-size: 12px; font-weight: 600; color: var(--text-secondary); text-align: center; padding: 10px; }
+
+    .proof-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+    @media (min-width: 600px) { .proof-grid { grid-template-columns: 1fr 1fr; } }
+    .proof-card { background-color: rgba(255,255,255,0.65); border: 1px solid rgba(107,45,62,0.10); border-radius: 8px; padding: 20px; display: flex; flex-direction: column; gap: 10px; }
+    .proof-avatar { width: 40px; height: 40px; border-radius: 50%; background-color: rgba(107,45,62,0.12); display: flex; align-items: center; justify-content: center; font-size: 10px; color: rgba(107,45,62,0.6); }
+
+    .offer-box { background-color: #ffffff; border: 1.5px solid rgba(107,45,62,0.12); border-radius: 10px; padding: 36px 28px; box-shadow: 0 2px 24px rgba(107,45,62,0.06); }
+
+    .checklist { display: flex; flex-direction: column; gap: 10px; }
+    .check-item { display: flex; align-items: flex-start; gap: 12px; padding: 12px 16px; background-color: rgba(107,45,62,0.03); border-radius: 4px; }
+    .check-icon { width: 22px; height: 22px; border-radius: 50%; background-color: var(--gold); flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #fff; font-weight: bold; }
+
+    .guarantee-badge { border: 1.5px dashed rgba(201,168,76,0.40); border-radius: 8px; padding: 28px 24px; text-align: center; background-color: rgba(201,168,76,0.05); max-width: 480px; margin: 0 auto; }
+
+    /* --- FAQ Accordion --- */
+    .faq-item { background: rgba(255,255,255,0.85); border: 1px solid rgba(107,45,62,0.1); border-radius: 8px; margin-bottom: 12px; box-shadow: 0 4px 16px rgba(107,45,62,0.03); overflow: hidden; transition: box-shadow 0.3s ease; }
+    .faq-item:hover { box-shadow: 0 6px 20px rgba(107,45,62,0.06); }
+    .faq-question { padding: 22px 24px; font-weight: 600; font-size: 1.05rem; color: var(--wine); cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .faq-icon { font-size: 1.4rem; font-weight: 300; transition: transform 0.3s ease; color: var(--gold); }
+    .faq-answer-wrapper { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+    .faq-answer-inner { overflow: hidden; }
+    .faq-answer-text { padding: 0 24px 24px; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; opacity: 0; transition: opacity 0.4s ease; }
+    .faq-item.active .faq-icon { transform: rotate(45deg); }
+    .faq-item.active .faq-answer-wrapper { grid-template-rows: 1fr; }
+    .faq-item.active .faq-answer-text { opacity: 1; transition-delay: 0.2s; }
+
+    /* --- Media & Proof Carousel --- */
+    .carousel-section { width: 100vw; max-width: 100%; overflow: hidden; padding: 10px 0; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); position: relative; }
+    .carousel-track { display: flex; width: max-content; gap: 16px; padding: 0 12px; animation: scrollCarousel 20s linear infinite; }
+    .carousel-section:hover .carousel-track { animation-play-state: paused; }
+    .carousel-card { flex-shrink: 0; height: 260px; width: max-content; background: transparent; border-radius: 8px; display: flex; align-items: center; justify-content: center; overflow: hidden; box-shadow: 0 5px 20px rgba(107,45,62,0.1); }
+    .carousel-card img { height: 100%; width: auto; object-fit: contain; background-color: #fff; border-radius: 8px; display: block; }
+    @keyframes scrollCarousel {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(calc(-50% - 12px)); }
+    }
+
+    .media-grid { display: grid; grid-template-columns: 1fr; gap: 16px; width: 100%; margin: 0 auto; }
+    @media (min-width: 768px) { .media-grid { grid-template-columns: 1fr 1fr 1fr; } }
+    .media-card { background-color: rgba(246,244,240,0.85); border: 1px solid rgba(107,45,62,0.12); border-radius: 6px; padding: 28px 24px; box-shadow: 0 4px 18px rgba(107,45,62,0.04); display: flex; flex-direction: column; justify-content: space-between; gap: 16px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .media-card:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(107,45,62,0.08); }
+    .media-headline { font-family: var(--serif); font-size: 1.25rem; font-weight: 600; color: var(--text-primary); line-height: 1.35; }
+    .media-logo { font-size: 10px; text-transform: uppercase; font-weight: 600; color: var(--rose-mid); letter-spacing: 0.1em; border-top: 1px dashed rgba(107,45,62,0.15); padding-top: 14px; margin-top: 10px; }
+    .guarantee-icon { width: 56px; height: 56px; border-radius: 50%; border: 2px dashed rgba(201,168,76,0.35); margin: 0 auto 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: var(--gold); }
+
+    footer { padding: 48px 0 32px; background-color: var(--dark-deep); }
+    .divider { width: 48px; height: 1px; background-color: rgba(107,45,62,0.25); margin: 0 auto; }
+    .divider--light { background-color: rgba(242,235,224,0.18); }
+
+    .text-center { text-align: center; }
+    .text-italic { font-style: italic; }
+
+    /* ============================================================
+       MOTION DESIGN — LIGHTWEIGHT PREMIUM
+       ============================================================ */
+
+    /* --- Keyframes --- */
+    @keyframes fadeFloatUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    @keyframes ctaBreath {
+      0%, 100% { box-shadow: 0 4px 14px rgba(201,168,76,0.28); }
+      50%       { box-shadow: 0 6px 26px rgba(201,168,76,0.50); }
+    }
+    @keyframes pricePulse {
+      0%, 100% { color: var(--wine); }
+      50%       { color: #8B3651; }
+    }
+
+    /* --- Hero entrance: CSS-only, instant sequencing --- */
+    .hero-overline { animation: fadeIn      0.55s ease both 0.05s; }
+    .hero-headline { animation: fadeFloatUp 0.70s ease both 0.20s; }
+    .hero-sub      { animation: fadeFloatUp 0.70s ease both 0.38s; }
+    .hero-image    { animation: fadeIn      0.80s ease both 0.50s; }
+    .hero-cta-wrap { animation: fadeFloatUp 0.65s ease both 0.65s; }
+    .hero-social   { animation: fadeIn      0.55s ease both 0.80s; }
+
+    .hero-cta-wrap .ph-block--cta {
+      animation: ctaBreath 3s ease-in-out infinite 1.6s;
+    }
+
+    /* --- Scroll-reveal: block-level only, fluid pace --- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px) scale(0.96);
+      transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.reveal--left  { transform: translateX(-30px) scale(0.96); }
+    .reveal.reveal--right { transform: translateX(30px) scale(0.96); }
+    .reveal.is-visible    { opacity: 1; transform: translate(0) scale(1); }
+
+    /* Stagger leve mas perceptível */
+    .reveal[data-delay="1"] { transition-delay: 0.08s; }
+    .reveal[data-delay="2"] { transition-delay: 0.16s; }
+    .reveal[data-delay="3"] { transition-delay: 0.24s; }
+    .reveal[data-delay="4"] { transition-delay: 0.32s; }
+
+    /* --- Card hover microinteractions --- */
+    .pillar-card {
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+    .pillar-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 28px rgba(107,45,62,0.10);
+      border-color: rgba(107,45,62,0.20);
+    }
+
+    .proof-card {
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .proof-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 24px rgba(107,45,62,0.08);
+    }
+
+    .value-block {
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+    .value-block:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 18px rgba(107,45,62,0.07);
+    }
+
+    /* --- CTA premium feedback --- */
+    .ph-block--cta, .ph-block--cta-dark {
+      transition: background-color 0.20s ease, transform 0.16s ease, box-shadow 0.20s ease;
+      user-select: none;
+    }
+    .ph-block--cta:hover, .ph-block--cta-dark:hover {
+      background-color: #B8922F;
+      transform: translateY(-2px);
+      box-shadow: 0 7px 22px rgba(201,168,76,0.40);
+    }
+    .ph-block--cta:active, .ph-block--cta-dark:active {
+      transform: translateY(1px) scale(0.98);
+      box-shadow: 0 2px 8px rgba(201,168,76,0.22);
+    }
+
+    /* --- Offer box highlight on entry --- */
+    .offer-box { transition: box-shadow 0.5s ease; }
+    .offer-box.is-highlighted {
+      box-shadow: 0 0 0 2px rgba(201,168,76,0.22), 0 8px 36px rgba(107,45,62,0.09);
+    }
+    .price-value.is-pulsing { animation: pricePulse 2.2s ease-in-out 2; }
+
+    /* --- Highlight-band reveal lateral --- */
+    .highlight-band {
+      opacity: 0;
+      transform: translateX(-14px);
+      transition: opacity 0.6s ease, transform 0.6s cubic-bezier(.4,0,.2,1);
+    }
+    .highlight-band.is-visible { opacity: 1; transform: none; }
+
+    /* --- Check-items stagger suave --- */
+    .check-item {
+      opacity: 0;
+      transform: translateX(-10px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .check-item.is-visible { opacity: 1; transform: none; }
+    .check-item[data-delay="1"] { transition-delay: 0.06s; }
+    .check-item[data-delay="2"] { transition-delay: 0.14s; }
+    .check-item[data-delay="3"] { transition-delay: 0.22s; }
+
+    /* --- Divider cresce da esquerda --- */
+    @keyframes growDivider {
+      from { transform: scaleX(0); opacity: 0; }
+      to   { transform: scaleX(1); opacity: 1; }
+    }
+    .divider { transform-origin: left center; }
+    .divider.is-visible { animation: growDivider 0.7s cubic-bezier(.4,0,.2,1) both; }
+
+    /* --- Hero CTA shimmer extra --- */
+    @keyframes shimmer {
+      0%   { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+    .hero-cta-wrap .ph-block--cta:hover {
+      background: linear-gradient(90deg, #C9A84C 0%, #e8c96a 40%, #C9A84C 60%, #a8862e 100%);
+      background-size: 200% auto;
+      animation: shimmer 1s linear infinite;
+    }
+
+    /* --- Hover helpers --- */
+    .bullet-item { transition: transform 0.20s ease, background-color 0.20s ease; }
+    .bullet-item:hover { transform: translateX(4px); background-color: rgba(107,45,62,0.07); }
+
+    .guarantee-badge { transition: transform 0.30s ease, box-shadow 0.30s ease; }
+    .guarantee-badge:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(201,168,76,0.14); }
+
+    .founder-portrait > div { transition: transform 0.38s ease, box-shadow 0.38s ease; }
+    .founder-portrait > div:hover { transform: scale(1.018) translateY(-4px); box-shadow: 0 12px 38px rgba(107,45,62,0.11); }
+
+
+  </style>
+</head>
+
+<body>
+
+<section id="s1-hero" class="bg-champagne section-pad--hero">
+  <div class="container text-center">
+    <span class="overline hero-overline">O atalho estratégico da noiva</span>
+    <div class="sp-sm"></div>
+
+    <h1 class="hero-headline">
+      O casamento especial que você sempre sonhou.<br />
+      <em>Sem o endividamento que te assombra desde o primeiro orçamento.</em>
+    </h1>
+    <div class="sp-md"></div>
+
+    <p class="sub-headline hero-sub">
+      Um passo a passo simples e prático para você organizar um dia incrível, não cair nas armadilhas de preços inflacionados e chegar ao altar com a mente (e o bolso) em paz.
+    </p>
+    <div class="sp-lg"></div>
+
+    <div class="hero-video-wrap hero-image" style="border-radius: 12px; overflow: hidden; box-shadow: 0 12px 40px rgba(107,45,62,0.12); width: 100%; max-width: 860px; margin: 0 auto; aspect-ratio: 16/9; background-color: #000; position: relative;">
+      <video src="video/14620283_3840_2160_30fps.mp4" autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover; pointer-events: none; display: block;"></video>
+    </div>
+    <div class="sp-lg"></div>
+
+    <div class="hero-cta-wrap">
+      <a href="https://pay.cakto.com.br/t7rqhed_819998" class="ph-block--cta" style="text-decoration: none;">
+        Quero planejar de forma inteligente
+      </a>
+    </div>
+    <div class="sp-sm"></div>
+
+    <p class="hero-social" style="font-size: var(--micro); color: var(--text-secondary); letter-spacing: 0.09em; text-transform: uppercase;">
+      🔓 Mais de 1.200 noivas no controle do planejamento · Acesso Imediato
+    </p>
+  </div>
+</section>
+
+<section id="s2-identification" class="bg-warm-beige section-pad--tight">
+  <div class="container">
+    <h2 class="section-headline">
+      Se você chegou até aqui, provavelmente já tomou o primeiro susto ao ver quanto os fornecedores cobram só por ouvir a palavra "casamento".
+    </h2>
+    <div class="sp-md"></div>
+
+    <div class="emotional-bullets">
+      <div class="bullet-item">
+        <div class="bullet-dot"></div>
+        <span class="bullet-text">
+          Você cria pastas maravilhosas no Pinterest, mas sente um frio na barriga quase instantâneo quando tenta descobrir como pagar por tudo aquilo.
+        </span>
+      </div>
+      <div class="bullet-item">
+        <div class="bullet-dot"></div>
+        <span class="bullet-text">
+          O que parecia que ia ser a fase mais divertida acabou virando uma coleção de boletos e conversas super monótonas sobre cortes de gastos com seu parceiro.
+        </span>
+      </div>
+      <div class="bullet-item">
+        <div class="bullet-dot"></div>
+        <span class="bullet-text">
+          Você percebe rapidinho que qualquer aluguel, vestido ou salgado de festa custa triplamente mais caro na hora que a palavra "casamento" sai da sua boca.
+        </span>
+      </div>
+      <div class="bullet-item">
+        <div class="bullet-dot"></div>
+        <span class="bullet-text">
+          E agora você olha o orçamento e cogita desistir de detalhes que sempre sonhou para a sua festa caber no bolso do mês até a data chegar.
+        </span>
+      </div>
+    </div>
+    <div class="sp-md"></div>
+
+    <div class="highlight-band">
+      <p class="sub-headline" style="font-style: italic; font-size: 1.1rem; color: var(--wine);">
+        "Em que momento o casamento deixou de ser um sonho leve e passou a ser uma fonte constante de preocupação?"
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="s3-consequence" class="bg-dark-romantic section-pad--tight">
+  <div class="container">
+    <span class="overline overline--light">Sem Surpresas</span>
+    <div class="sp-sm"></div>
+
+    <h2 class="section-headline section-headline--light">
+      O custo real (e silencioso) de organizar tudo sem uma estratégia
+    </h2>
+    <div class="sp-md"></div>
+
+    <div style="display: flex; flex-direction: column; gap: 16px;">
+      <div class="ph-block ph-block--dark ph-block--line" style="padding: 16px 20px;">
+        <strong>As escolhas por impulso:</strong> Fechar contratos na empolgação inicial e descobrir, nos meses finais, que não sobrou dinheiro para os detalhes importantes da festa.
+      </div>
+      <div class="ph-block ph-block--dark ph-block--line" style="padding: 16px 20px;">
+        <strong>A fatura pós-festa:</strong> Começar a vida de casados pagando boletos e limites estourados de um evento que já passou, gerando tensão logo nos primeiros meses a dois.
+      </div>
+      <div class="ph-block ph-block--dark ph-block--line" style="padding: 16px 20px;">
+        <strong>O desgaste do relacionamento:</strong> Ver as conversas leves sobre o futuro se transformarem apenas em discussões cansativas de cortes e planilhas financeiras.
+      </div>
+      <div class="ph-block ph-block--dark ph-block--line" style="padding: 16px 20px;">
+        <strong>A sensação de frustração:</strong> Olhar para o próprio casamento e saber que abriu mão do que realmente queria porque não soube negociar os preços abusivos.
+      </div>
+    </div>
+    <div class="sp-lg"></div>
+
+    <div class="highlight-band highlight-band--dark" style="padding: 18px 24px; border-radius: 8px;">
+      <div class="ph-block ph-block--warning" style="background: transparent; border: none; padding: 0; font-size: 15px; line-height: 1.5; color: #E8D5B5;">
+        <strong>A realidade é dura:</strong> A maioria das noivas acaba gastando 30% a mais do que o planejado. O pior? Muitas vezes esse dinheiro extra vai para taxas escondidas que não mudam em nada a beleza da festa.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="s4-reframe" class="bg-champagne section-pad--breathe">
+  <div class="container text-center">
+    <div class="divider"></div>
+    <div class="sp-lg"></div>
+
+    <span class="overline">A Virada de Chave</span>
+    <div class="sp-sm"></div>
+
+    <h2 class="section-headline" style="font-size: clamp(1.7rem, 4.5vw, 2.5rem); font-weight: 600; font-family: var(--serif); color: var(--wine);">
+      "O segredo não está na quantidade de dinheiro que você tem. O segredo está no plano exato de como distribuí-lo."
+    </h2>
+    <div class="sp-md"></div>
+
+    <p class="sub-headline" style="max-width: 600px; margin: 0 auto; line-height: 1.7;">
+      O Pinterest e o Instagram estão cheios de inspirações maravilhosas, mas não te ajudam a pagar por elas. O que você precisa agora não é apenas de referências criativas, mas de <strong>estratégia financeira</strong>.<br><br>Este material não é apenas um conselho amigável. É um guia prático de economia e negociação para noivas da vida real. Ele te ajuda a identificar preços inflacionados, defende o seu dinheiro na mesa de contrato e torna perfeitamente possível aquela festa inesquecível sem estresse ou dívidas futuras.
+    </p>
+
+    <div class="sp-xl"></div>
+    <div class="divider"></div>
+  </div>
+</section>
+
+<section id="s5-method" class="bg-muted-rose section-pad">
+  <div class="container">
+    <div class="text-center">
+      <span class="overline">A Solução Prática</span>
+      <div class="sp-sm"></div>
+      <h2 class="section-headline">A Lógica Por Trás do Método</h2>
+      <div class="sp-sm"></div>
+      <p class="sub-headline">
+        Uma estrutura logística e financeira testada no mercado. Desenhada para proteger o seu dinheiro contra a inflação dos casamentos, assegurando a estética memorável do seu evento.
+      </p>
+    </div>
+    <div class="sp-lg"></div>
+
+    <div class="pillar-grid">
+      <div class="pillar-card">
+        <span class="pillar-number">01</span>
+        <div class="pillar-title">Orçamento Blindado</div>
+        <div class="pillar-desc">Ferramentas exatas para definir o valor real que vocês podem investir, garantindo que o dinheiro dure até o casamento sem surpresas ocultas.</div>
+      </div>
+      <div class="pillar-card">
+        <span class="pillar-number">02</span>
+        <div class="pillar-title">Roteiro de Negociação</div>
+        <div class="pillar-desc">O passo a passo para se comunicar com fornecedores. Uma forma educada e segura de questionar propostas e limpar taxas cobradas sem necessidade.</div>
+      </div>
+      <div class="pillar-card">
+        <span class="pillar-number">03</span>
+        <div class="pillar-title">Onde Investir (e Cortar)</div>
+        <div class="pillar-desc">O foco nos 20% do visual que geram 80% de impacto na festa, eliminando completamente gastos invisíveis que ninguém nota, mas pesam muito no bolso.</div>
+      </div>
+    </div>
+    <div class="sp-lg"></div>
+
+    <div style="max-width: 480px; margin: 0 auto;">
+      <a href="https://pay.cakto.com.br/t7rqhed_819998" class="ph-block--cta" style="text-decoration: none;">
+        Quero aplicar o plano de contenção e planejamento
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="s6-founder" class="bg-neutral-soft section-pad">
+  <div class="container">
+    <div class="founder-layout">
+      <div class="founder-portrait">
+        <img src="foto%20aline/pexels-photo-32617292.webp" alt="Aline - Fundadora do Casamento Inteligente" style="width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto; border-radius: 10px; box-shadow: 0 12px 38px rgba(107,45,62,0.11);" />
+      </div>
+      <div class="founder-narrative">
+        <span class="overline">Quem preparou isto</span>
+        <div class="sp-sm"></div>
+        <h2 class="section-headline">"Eu me lembro da noite exata em que olhei para o orçamento do buffet e comecei a chorar na mesa da sala."</h2>
+        <div class="sp-sm"></div>
+        <p class="sub-headline">
+          Oi, eu sou a Aline. Poucos meses depois do tão sonhado pedido de casamento, a nossa alegria virou um balde de água fria. Eu abri a nossa planilha financeira e vi que o custo do "básico" para a festa já passava muito de tudo que eu e meu noivo tínhamos juntado a vida inteira.<br><br>Sentei no sofá exausta e me senti culpada por querer uma festa. Parecia que celebrar o nosso amor ia começar a nossa vida a dois com uma dívida gigante que não faria o menor sentido. 
+        </p>
+        <div class="sp-md"></div>
+        <div class="highlight-band">
+          <p class="sub-headline text-italic" style="font-size: 1.05rem; color: var(--wine);">
+            "E logo ali enxuguei a ideia frágil de noiva vulnerável. Decidi parar de romantizar pagamentos de fornecedores. Analisei tudo como minha própria gestora logística no trabalho. Filtrei excessos decorativos e abordei orçamentos em negociações lógicas e desconstruídas."
+          </p>
+        </div>
+        <div class="sp-md"></div>
+        <p class="sub-headline">
+          O resultado dessa frieza estratégica? Casei em um dia espetacular com uma cerimônia cheia e bem recebida pela nossa família e cortei mais de um terço do orçamento das listas antigas iniciais. Em paz.<br><br>Quis documentar tudo que entendi que o mercado comercial cobra de quem não enxerga, e minha proposta real nisso aqui é clara hoje pra você encurtar as dores da sua pesquisa e dormir sem medo dos custos também.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="s8-proof" class="bg-warm-beige section-pad">
+  <div class="container">
+    <div class="text-center">
+      <span class="overline">Casos Reais</span>
+      <div class="sp-sm"></div>
+      <h2 class="section-headline">
+        Histórias reais de noivas que conseguiram organizar com mais calma, clareza e controle
+      </h2>
+    </div>
+    <div class="sp-lg"></div>
+
+    <div class="proof-grid">
+      <div class="proof-card">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div class="proof-avatar">M</div>
+          <div><div style="font-size: 13px; font-weight: 600;">Mariana L.</div><div style="font-size: 11px; color: var(--text-secondary);">Economia no Orçamento</div></div>
+        </div>
+        <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.5; font-style: italic;">
+          "Eles me mandaram um contrato cheio de taxas 'obrigatórias' que eu nem entendia. Usei o roteiro na reunião e tirei 3 cobranças abusivas na hora. Economizei R$ 2.400 em uma única tarde!"
+        </p>
+      </div>
+
+      <div class="proof-card">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div class="proof-avatar">C</div>
+          <div><div style="font-size: 13px; font-weight: 600;">Camila R.</div><div style="font-size: 11px; color: var(--text-secondary);">Comunicação Conjugal</div></div>
+        </div>
+        <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.5; font-style: italic;">
+          "Qualquer conversa sobre dinheiro terminava super mal entre mim e meu noivo. A planilha de divisão organizou tudo e tirou a ansiedade da jogada. Voltou a ser gostoso planejar nosso dia a dois."
+        </p>
+      </div>
+
+      <div class="proof-card">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div class="proof-avatar">T</div>
+          <div><div style="font-size: 13px; font-weight: 600;">Thaís V.</div><div style="font-size: 11px; color: var(--text-secondary);">Empoderamento e Segurança</div></div>
+        </div>
+        <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.5; font-style: italic;">
+          "Sempre tive muita vergonha de negociar ou dizer que estava caro. O guia me deu as frases prontas para falar sem medo. Fechei a festa dentro da minha realidade, sem passar nenhum constrangimento."
+        </p>
+      </div>
+
+      <div class="proof-card">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div class="proof-avatar">P</div>
+          <div><div style="font-size: 13px; font-weight: 600;">Paula G.</div><div style="font-size: 11px; color: var(--text-secondary);">Saúde Mental</div></div>
+        </div>
+        <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.5; font-style: italic;">
+          "Não tem preço deitar a cabeça no travesseiro sabendo que todas as parcelas cabem perfeitamente no nosso salário. Eu quase cancelei tudo por medo, mas o método devolveu completamente a minha paz."
+        </p>
+      </div>
+    </div>
+    <div class="sp-lg"></div>
+
+    <div class="text-center reveal">
+      <span class="overline">RESULTADOS COMPROVADOS</span>
+      <div class="sp-sm"></div>
+      <h2 class="section-headline">
+        Provas reais de noivas que aplicaram o método<br>e transformaram seus orçamentos
+      </h2>
+    </div>
+    <div class="sp-md"></div>
+
+    <div class="carousel-section">
+      <div class="carousel-track">
+        <!-- Set 1 -->
+        <div class="carousel-card"><img src="foto%20depoimento/52c577e8-55ca-4fe0-9b9e-92ef529fe3ab-_1_.webp" alt="Depoimento 1" loading="lazy"></div>
+        <div class="carousel-card"><img src="foto%20depoimento/539dc6bb-e3c0-4c60-94fb-e65fd7eed0ae-_1_.webp" alt="Depoimento 2" loading="lazy"></div>
+        <div class="carousel-card"><img src="foto%20depoimento/70312aff-a94e-46e4-9ca0-af4725cb4544-_1_-_1_.webp" alt="Depoimento 3" loading="lazy"></div>
+        <div class="carousel-card"><img src="foto%20depoimento/a4f0494e-b9fd-481c-8478-2c21e60968de-_1_.webp" alt="Depoimento 4" loading="lazy"></div>
+        <div class="carousel-card"><img src="foto%20depoimento/b718eb78-256a-460c-a47c-53a251ae857f.jpg" alt="Depoimento 5" loading="lazy"></div>
+        <!-- Set 2 for infinite loop -->
+        <div class="carousel-card"><img src="foto%20depoimento/52c577e8-55ca-4fe0-9b9e-92ef529fe3ab-_1_.webp" alt="Depoimento 1" loading="lazy"></div>
+        <div class="carousel-card"><img src="foto%20depoimento/539dc6bb-e3c0-4c60-94fb-e65fd7eed0ae-_1_.webp" alt="Depoimento 2" loading="lazy"></div>
+        <div class="carousel-card"><img src="foto%20depoimento/70312aff-a94e-46e4-9ca0-af4725cb4544-_1_-_1_.webp" alt="Depoimento 3" loading="lazy"></div>
+        <div class="carousel-card"><img src="foto%20depoimento/a4f0494e-b9fd-481c-8478-2c21e60968de-_1_.webp" alt="Depoimento 4" loading="lazy"></div>
+        <div class="carousel-card"><img src="foto%20depoimento/b718eb78-256a-460c-a47c-53a251ae857f.jpg" alt="Depoimento 5" loading="lazy"></div>
+      </div>
+    </div>
+    <div class="sp-lg"></div>
+
+    <div class="text-center reveal">
+      <span class="overline">O QUE ESTÃO DIZENDO SOBRE O MÉTODO</span>
+    </div>
+    <div class="sp-md"></div>
+
+    <div class="media-grid">
+      <div class="media-card reveal" data-delay="1">
+        <h3 class="media-headline">Noivas reduzem custos do casamento em até 40% com novo método estratégico</h3>
+        <div class="media-logo">[LOGO DO PORTAL / REVISTA / BLOG]</div>
+      </div>
+      <div class="media-card reveal" data-delay="2">
+        <h3 class="media-headline">Planejamento inteligente vira tendência entre casais que querem casar sem dívidas</h3>
+        <div class="media-logo">[LOGO DO PORTAL / REVISTA / BLOG]</div>
+      </div>
+      <div class="media-card reveal" data-delay="3">
+        <h3 class="media-headline">Especialistas apontam estratégia financeira como fator decisivo para casamentos sustentáveis</h3>
+        <div class="media-logo">[LOGO DO PORTAL / REVISTA / BLOG]</div>
+      </div>
+    </div>
+    <div class="sp-lg"></div>
+
+    <div class="text-center reveal" style="max-width: 680px; margin: 0 auto;">
+      <p style="font-family: var(--serif); font-size: 1.45rem; font-style: italic; color: var(--text-secondary); line-height: 1.5;">
+        "Quando a organização deixa de ser improvisada, o casamento volta a ser o que sempre deveria ter sido: um momento leve, consciente e inesquecível."
+      </p>
+    </div>
+    <div class="sp-md"></div>
+
+    <div style="background-color: rgba(201,168,76,0.08); padding: 24px; border-radius: 8px; text-align: center; border: 1px solid rgba(201,168,76,0.2); max-width: 600px; margin: 0 auto;">
+      <p style="font-size: 15px; color: #514013; line-height: 1.6; margin: 0;">
+        Quando existe um plano claro, as decisões deixam de ser impulsivas e passam a ser estratégicas.<br>
+        Isso reduz desperdícios, evita conflitos e transforma o planejamento em algo mais leve e previsível.
+      </p>
+    </div>
+    <div class="sp-lg"></div>
+
+    <div style="max-width: 480px; margin: 0 auto;">
+      <a href="https://pay.cakto.com.br/t7rqhed_819998" class="ph-block--cta" style="text-decoration: none;">
+        Eu quero adotar essa tranquilidade
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="s9-value" class="bg-elegant-neutral section-pad">
+  <div class="container">
+    <div class="text-center">
+      <span class="overline">O que chega ao seu e-mail hoje</span>
+      <div class="sp-sm"></div>
+      <h2 class="section-headline">
+        Um mapa tático para você parar de decidir no escuro e assumir o controle total da sua festa.
+      </h2>
+    </div>
+    <div class="sp-lg"></div>
+
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <div class="value-block reveal" data-delay="1" style="background: white; padding: 20px; border-radius: 8px; border: 1px solid rgba(107,45,62,0.1);">
+        <span style="font-size: 11px; color: var(--rose-mid); font-weight: 600; text-transform: uppercase;">A Base Fundamental</span>
+        <h3 style="font-size: 16px; color: var(--text-primary); margin: 4px 0;">O Orçamento Base Bem Ajustado</h3>
+        <p style="font-size: 14px; color: var(--text-secondary); margin: 0;">O direcionamento pragmático para formar os fundos de despesas em comum garantidos e cobrir todas as parcelas no tempo certo sem jamais afogar os respiros da sua organização presente.</p>
+      </div>
+
+      <div class="value-block reveal" data-delay="2" style="background: white; padding: 20px; border-radius: 8px; border: 1px solid rgba(107,45,62,0.1);">
+        <span style="font-size: 11px; color: var(--rose-mid); font-weight: 600; text-transform: uppercase;">O Módulo de Defesa</span>
+        <h3 style="font-size: 16px; color: var(--text-primary); margin: 4px 0;">O Negociador com Mercado de Casamentos</h3>
+        <p style="font-size: 14px; color: var(--text-secondary); margin: 0;">Como diagnosticar subitens em propostas superfaturadas em repasses rápidos, permitindo negociar o núcleo do que entregam e aparar as famosas gorduras escondidas de cada orçamentista.</p>
+      </div>
+
+      <div class="value-block reveal" data-delay="3" style="background: rgba(201,168,76,0.08); padding: 20px; border-radius: 8px; border: 1px solid rgba(201,168,76,0.3);">
+        <span style="font-size: 11px; color: var(--gold); font-weight: bold; text-transform: uppercase;">A Central de Controle Gratuita</span>
+        <h3 style="font-size: 16px; color: var(--text-primary); margin: 4px 0;">Painel Financeiro Automatizado (Planilhas e Checklists)</h3>
+        <p style="font-size: 14px; color: var(--text-secondary); margin: 0;">A engenharia funcional já vem em moldes limpos. Apenas insira com tranquilidade seus compromissos no computador, e ele desenha de imediato seus limites disponíveis e pendências verde ou sinalizações vermelhas diretas.</p>
+      </div>
+    </div>
+    <div class="sp-lg"></div>
+
+    <div class="checklist">
+      <div class="check-item"><div class="check-icon">✓</div><span style="font-size: 15px; color: var(--text-secondary); font-weight: 500;">A garantia da segurança e embasamento ao debater a mesa ao assinar novos contratos.</span></div>
+      <div class="check-item"><div class="check-icon">✓</div><span style="font-size: 15px; color: var(--text-secondary); font-weight: 500;">O distanciamento racional sobre o dinheiro afastando instabilidades emocionais de cobrança entre o casal.</span></div>
+      <div class="check-item"><div class="check-icon">✓</div><span style="font-size: 15px; color: var(--text-secondary); font-weight: 500;">Maior lucro real sobre o bolso redirecionando os erros prevenidos em itens desejados duradouros da vida dois.</span></div>
+    </div>
+    <div class="sp-md"></div>
+
+    <div class="highlight-band highlight-band--gold">
+      <div style="background: transparent; border: none; padding: 0; text-align: left; color: #7A5B18; font-size: 15px; font-weight: 500; line-height: 1.5;">
+        Na prática, isso significa ter segurança para negociar, saber exatamente até onde pode investir e evitar aquelas decisões feitas no susto, que depois pesam no bolso e na cabeça.<br><br>
+        Você passa a enxergar o planejamento com clareza — e não mais com ansiedade.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="s10-offer" class="bg-champagne section-pad--breathe">
+  <div class="container">
+    <div class="text-center">
+      <span class="overline">O Retorno Positivo</span>
+      <div class="sp-sm"></div>
+      <h2 class="section-headline">
+        Um pequeno investimento agora pode evitar grandes arrependimentos financeiros depois.
+      </h2>
+      <div class="sp-xs"></div>
+      <p class="sub-headline">
+        Deixar essa organização em lacuna é o que gera os imprevistos difíceis mais amargos da correria aos meses do evento.
+      </p>
+    </div>
+    <div class="sp-lg"></div>
+
+    <div class="offer-box reveal" id="offer-box">
+      <div class="text-center" style="font-size: 16px; font-weight: 600; color: var(--text-primary); text-transform: uppercase; letter-spacing: 0.05em;">
+        Acesso Definitivo Ao Método Casamento Inteligente
+      </div>
+      <div class="sp-md"></div>
+
+      <div class="text-center">
+        <p style="font-size: var(--small); color: var(--text-secondary); text-decoration: line-through;">
+          Valor em Formatos Isolados R$ 197,00
+        </p>
+        <div class="sp-xs"></div>
+        <p class="price-value" style="font-family: var(--serif); font-size: clamp(3rem, 7vw, 4.5rem); font-weight: 700; color: var(--wine); line-height: 1;">
+          R$ 27,00
+        </p>
+        <p style="font-size: var(--micro); color: var(--text-secondary); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 8px;">
+          Entregue no Seu E-mail · Planilhas Liberadas de Imediato
+        </p>
+      </div>
+      <div class="sp-md"></div>
+
+      <div style="text-align: center; font-size: 14px; font-weight: 500; background: rgba(201,168,76,0.06); border: 1px dashed rgba(201,168,76,0.3); padding: 16px; color: #514013; border-radius: 6px;">
+        Por um valor consideravelmente mais leve que uma ida de Uber aos ensaios fornecedores ou de um prato individual casual, recebe o embasamento pleno sobre investimentos da casa dos altos milhares salvaguardados pelo seu comando lógico agora, a rentabilizar com segurança logo a revisão em suas aprovações contratuais próximas neste mesmo tempo de preparativos que inicia hoje sem lacunas.
+      </div>
+      <div class="sp-md"></div>
+
+      <a href="https://pay.cakto.com.br/t7rqhed_819998" class="ph-block--cta" style="font-size: 1.15rem; padding: 22px 30px; border-radius: 8px; font-weight: 700; text-decoration: none;">
+        Sim, quero garantir meu acesso e blindar meu bolso
+      </a>
+      <div class="sp-sm"></div>
+
+      <div class="text-center">
+        <p style="font-size: var(--micro); color: var(--text-secondary); letter-spacing: 0.05em; text-transform: uppercase; font-weight: 600;">
+          🔒 Compra 100% segura · Acesso imediato pelo e-mail
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PERGUNTAS FREQUENTES -->
+<section id="faq" class="bg-champagne section-pad">
+  <div class="container--wide" style="max-width: 760px;">
+    <div class="text-center reveal">
+      <span class="overline">PERGUNTAS FREQUENTES</span>
+      <div class="sp-sm"></div>
+      <h2 class="section-headline">Antes de tomar sua decisão, é natural querer ter algumas certezas</h2>
+      <div class="sp-sm"></div>
+      <p class="sub-headline">Estas são as dúvidas mais comuns de noivas que desejam organizar um casamento bonito sem comprometer sua tranquilidade financeira.</p>
+    </div>
+    <div class="sp-lg"></div>
+
+    <div class="faq-list">
+      <div class="faq-item reveal" data-delay="1">
+        <div class="faq-question">Isso realmente funciona para qualquer tipo de orçamento?<span class="faq-icon">+</span></div>
+        <div class="faq-answer-wrapper"><div class="faq-answer-inner"><div class="faq-answer-text">
+          Sim. O método não depende do valor total disponível, mas da forma como esse valor é distribuído.<br><br>Ele foi estruturado justamente para ajudar noivas que sentem que o dinheiro não rende ou que têm medo de perder o controle dos custos.
+        </div></div></div>
+      </div>
+      <div class="faq-item reveal" data-delay="2">
+        <div class="faq-question">Eu não entendo nada de finanças… vou conseguir aplicar?<span class="faq-icon">+</span></div>
+        <div class="faq-answer-wrapper"><div class="faq-answer-inner"><div class="faq-answer-text">
+          Vai sim. O material foi criado para ser simples, direto e prático.<br><br>Você não precisa ter experiência com planilhas ou negociação. O passo a passo foi pensado para guiar suas decisões com clareza, mesmo que você nunca tenha planejado um evento antes.
+        </div></div></div>
+      </div>
+      <div class="faq-item reveal" data-delay="3">
+        <div class="faq-question">Isso serve se o casamento já estiver sendo planejado?<span class="faq-icon">+</span></div>
+        <div class="faq-answer-wrapper"><div class="faq-answer-inner"><div class="faq-answer-text">
+          Serve, e muitas vezes faz ainda mais diferença.<br><br>Mesmo que você já tenha começado a contratar fornecedores, ainda é possível reorganizar prioridades, renegociar escolhas e evitar gastos impulsivos até o grande dia.
+        </div></div></div>
+      </div>
+      <div class="faq-item reveal" data-delay="4">
+        <div class="faq-question">Meu noivo não gosta muito de falar sobre dinheiro… isso pode ajudar?<span class="faq-icon">+</span></div>
+        <div class="faq-answer-wrapper"><div class="faq-answer-inner"><div class="faq-answer-text">
+          Sim. Um dos benefícios do método é justamente trazer objetividade para decisões que costumam gerar tensão no casal.<br><br>Quando existe um plano claro, as conversas deixam de ser emocionais e passam a ser estratégicas e mais leves.
+        </div></div></div>
+      </div>
+      <div class="faq-item reveal" data-delay="5">
+        <div class="faq-question">Eu tenho medo de comprar e depois não usar…<span class="faq-icon">+</span></div>
+        <div class="faq-answer-wrapper"><div class="faq-answer-inner"><div class="faq-answer-text">
+          Esse receio é comum quando estamos sobrecarregadas com muitas decisões ao mesmo tempo.<br><br>Por isso o conteúdo foi organizado em etapas simples e acionáveis, permitindo que você aplique aos poucos, no seu ritmo, sem pressão.
+        </div></div></div>
+      </div>
+      <div class="faq-item reveal" data-delay="6">
+        <div class="faq-question">Esse material substitui assessoria ou cerimonial?<span class="faq-icon">+</span></div>
+        <div class="faq-answer-wrapper"><div class="faq-answer-inner"><div class="faq-answer-text">
+          Não. Ele funciona como uma base estratégica para que você faça escolhas mais conscientes, inclusive ao contratar profissionais.<br><br>Muitas noivas utilizam o método justamente para saber onde investir melhor antes de fechar qualquer serviço.
+        </div></div></div>
+      </div>
+    </div>
+    <div class="sp-lg"></div>
+
+    <div class="text-center reveal" style="max-width: 680px; margin: 0 auto;">
+      <p style="font-family: var(--serif); font-size: 1.15rem; font-style: italic; color: var(--wine); line-height: 1.6;">
+        "Planejar com clareza não tira a emoção do casamento.<br>Pelo contrário: devolve a leveza que a ansiedade financeira costuma roubar."
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="s11-risk" class="bg-dark-romantic section-pad--tight">
+  <div class="container text-center">
+    <div class="guarantee-badge">
+      <div class="guarantee-icon">🛡️</div>
+      <span class="overline overline--gold">A Proteção Total do Consumidor por 7 Dias Integrais</span>
+      <div class="sp-xs"></div>
+      <p style="font-family: var(--serif); font-size: 1.25rem; color: rgba(242,235,224,0.95); margin-top: 8px; font-weight: 600; line-height: 1.4;">
+        Você pode acessar o material com tranquilidade e avaliar se ele realmente faz sentido para o seu momento.
+      </p>
+      <div class="sp-sm"></div>
+      <p style="font-size: var(--small); color: rgba(242,235,224,0.8); line-height: 1.6;">
+        Durante 7 dias completos, você terá tempo para explorar as planilhas, entender a lógica do planejamento e sentir se isso traz mais segurança para as suas decisões.<br><br>
+        Se perceber que não é o que esperava, basta solicitar o reembolso dentro desse prazo.<br>
+        Sem burocracia. Sem justificativas complicadas.<br><br>
+        A ideia aqui não é pressionar você a comprar.<br>
+        É permitir que você avance no planejamento com mais confiança.
+      </p>
+    </div>
+    <div class="sp-lg"></div>
+
+    <div style="max-width: 600px; margin: 0 auto;">
+      <p style="font-size: 16px; color: rgba(242,235,224,0.8); line-height: 1.7;">
+        Planejar o casamento não precisa ser um processo marcado por tensão, dúvidas e medo de errar.<br><br>
+        Com organização e visão estratégica, é possível viver essa fase com mais tranquilidade — e chegar ao grande dia com a sensação de que fez escolhas conscientes.
+      </p>
+    </div>
+    <div class="sp-lg"></div>
+
+    <div style="max-width: 480px; margin: 0 auto;">
+      <a href="https://pay.cakto.com.br/t7rqhed_819998" class="ph-block--cta-dark" style="text-decoration: none;">
+        É A Organização que Necessito. Dar o Passo Seguro ᐳ
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer id="footer" class="bg-dark-deep">
+  <div class="container text-center">
+    <div class="sp-xl"></div>
+    <div class="divider divider--light"></div>
+    <div class="sp-md"></div>
+    <p style="font-family: var(--serif); font-size: 1.25rem; font-style: italic; color: rgba(242,235,224,0.45);">
+      "Decisões fundamentadas viabilizam celebrações que aquecem, desprovidas de sacrifícios nocivos no período mais valioso aos dois no altar de uma vida e paz diária conjunta no lar a formar."
+    </p>
+    <div class="sp-md"></div>
+    <p style="font-size: var(--micro); color: rgba(242,235,224,0.20); letter-spacing: 0.08em; text-transform: uppercase;">
+      <a href="#" style="color: inherit; text-decoration: none;">Política de Dados Essencial</a> &nbsp;·&nbsp; <a href="#" style="color: inherit; text-decoration: none;">Privacidade Responsável da Plataforma</a>
+    </p>
+    <div class="sp-sm"></div>
+    <p style="font-size: 10px; color: rgba(242,235,224,0.12); line-height: 1.6;">
+      © Protocolo Casamento Inteligente Comercial. Este informativo educacional de gestão não associa vinculações atestadas junto as mídias da Meta ou parceiros orgânicos terceiros anunciantes desta origem isolada.
+    </p>
+    <div class="sp-lg"></div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    /* ── Blocos principais ──────────────────────────── */
+    var targets = [
+      document.querySelector('#s2-identification .emotional-bullets'),
+      document.querySelector('#s2-identification .section-headline'),
+      document.querySelector('#s3-consequence'),
+      document.querySelector('#s4-reframe .section-headline'),
+      document.querySelector('.pillar-grid'),
+      document.querySelector('.founder-portrait'),
+      document.querySelector('.founder-narrative'),
+      document.querySelector('.proof-grid'),
+      document.querySelector('#s9-value .checklist'),
+      document.querySelector('#offer-box'),
+      document.querySelector('.guarantee-badge'),
+    ].filter(Boolean);
+
+    targets.forEach(function (el) { el.classList.add('reveal'); });
+
+    /* Founder: lateral */
+    var fp = document.querySelector('.founder-portrait');
+    var fn = document.querySelector('.founder-narrative');
+    if (fp) fp.classList.add('reveal--left');
+    if (fn) fn.classList.add('reveal--right');
+
+    /* Cards com stagger */
+    document.querySelectorAll('.pillar-card').forEach(function (el, i) {
+      el.classList.add('reveal');
+      if (i > 0) el.setAttribute('data-delay', i);
+    });
+    document.querySelectorAll('.proof-card').forEach(function (el, i) {
+      el.classList.add('reveal');
+      if (i > 0) el.setAttribute('data-delay', Math.min(i, 4));
+    });
+
+    /* Highlight-bands com reveal lateral */
+    document.querySelectorAll('.highlight-band').forEach(function (el) {
+      el.classList.add('reveal');
+    });
+
+    /* Check-items com stagger individual */
+    document.querySelectorAll('.check-item').forEach(function (el, i) {
+      el.setAttribute('data-delay', i + 1);
+    });
+
+    /* Dividers */
+    document.querySelectorAll('.divider').forEach(function (el) {
+      el.classList.add('reveal');
+    });
+
+    /* ── Observer principal ─────────────────────────── */
+    /* threshold 0.12 + rootMargin negativa = dispara SÓ DEPOIS
+       que entrou -50px na tela, ou seja, tem que rolar bem pra ver */
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.reveal, .check-item').forEach(function (el) {
+      io.observe(el);
+    });
+
+    /* ── Offer box highlight ────────────────────────── */
+    var offerBox = document.getElementById('offer-box');
+    var priceVal = document.querySelector('.price-value');
+    if (offerBox) {
+      var oi = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            setTimeout(function () {
+              offerBox.classList.add('is-highlighted');
+              if (priceVal) priceVal.classList.add('is-pulsing');
+            }, 350);
+            oi.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
+      oi.observe(offerBox);
+    }
+
+    /* ── FAQ Accordion Toggle ───────────────────────── */
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var parent = this.parentElement;
+        var isActive = parent.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(function(item) { item.classList.remove('active'); });
+        if (!isActive) { parent.classList.add('active'); }
+      });
+    });
+
+  })();
+
+</script>
+</body>
+</html>
+
