@@ -58,6 +58,8 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
+      overflow-x: hidden;
+
       font-family: var(--sans);
       font-size: var(--body);
       color: var(--text-primary);
@@ -176,8 +178,8 @@
     .swipe-carousel { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scroll-behavior: smooth; gap: 16px; padding: 10px 5% 30px; -ms-overflow-style: none; scrollbar-width: none; align-items: stretch; }
     .swipe-carousel::-webkit-scrollbar { display: none; }
     
-    .carousel-card { scroll-snap-align: center; flex: 0 0 76%; max-width: 280px; height: auto; background: transparent; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-    .carousel-card img { width: 100%; height: auto; max-height: 480px; object-fit: contain; background-color: transparent; border-radius: 8px; display: block; box-shadow: 0 5px 20px rgba(107,45,62,0.1); }
+    .carousel-card { scroll-snap-align: center; flex: 0 0 76%; max-width: 280px; height: 420px; background: #FFF; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 12px; box-shadow: 0 6px 24px rgba(107,45,62,0.05); padding: 8px; }
+    .carousel-card img { width: 100%; height: 100%; object-fit: contain; background-color: transparent; border-radius: 6px; display: block; box-shadow: none; }
     
     .media-swipe-card { scroll-snap-align: center; flex: 0 0 74%; max-width: 250px; background-color: #FAFAFA; border-radius: 12px; border: 3px solid rgba(107,45,62,0.03); box-shadow: 0 8px 24px rgba(107,45,62,0.06); padding: 8px; display: flex; align-items: center; justify-content: center; height: auto; transition: transform 0.25s ease; }
     .media-swipe-card:hover { transform: translateY(-2px); }
@@ -1009,7 +1011,7 @@
 
       function startAutoplay() {
         clearInterval(autoplayTimer);
-        autoplayTimer = setInterval(advance, 3500);
+        autoplayTimer = setInterval(advance, 2500);
       }
       
       startAutoplay();
