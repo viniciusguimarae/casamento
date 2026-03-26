@@ -175,13 +175,13 @@
 
     /* --- Interactive Swipe Carousels (Media & Proof) --- */
     .swipe-carousel-wrap { width: 100vw; max-width: 100%; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); position: relative; }
-    .swipe-carousel { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scroll-behavior: smooth; gap: 16px; padding: 10px 5% 30px; -ms-overflow-style: none; scrollbar-width: none; align-items: stretch; }
+    .swipe-carousel { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scroll-behavior: smooth; gap: 16px; padding: 10px 5% 30px; -ms-overflow-style: none; scrollbar-width: none; align-items: stretch; justify-content: center; }
     .swipe-carousel::-webkit-scrollbar { display: none; }
     
     .carousel-card { scroll-snap-align: center; flex: 0 0 76%; max-width: 280px; height: 320px; background: linear-gradient(145deg, #ffffff, #fdfbf9); display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 12px; box-shadow: 0 10px 24px rgba(107,45,62,0.06); padding: 8px; }
     .carousel-card img { width: 100%; height: 100%; object-fit: contain; background-color: transparent; border-radius: 6px; display: block; box-shadow: none; }
     
-    .media-swipe-card { scroll-snap-align: center; flex: 0 0 74%; max-width: 250px; background-color: #FAFAFA; background: linear-gradient(145deg, #ffffff, #faf8f5); border-radius: 12px; border: 1px solid rgba(107,45,62,0.03); box-shadow: 0 8px 24px rgba(107,45,62,0.06); padding: 8px; display: flex; align-items: center; justify-content: center; height: 320px; transition: transform 0.25s ease; }
+    .media-swipe-card { scroll-snap-align: center; flex: 0 0 85%; max-width: 320px; background-color: #FAFAFA; background: linear-gradient(145deg, #ffffff, #faf8f5); border-radius: 12px; border: 1px solid rgba(107,45,62,0.03); box-shadow: 0 8px 24px rgba(107,45,62,0.06); padding: 8px; display: flex; align-items: center; justify-content: center; height: 420px; transition: transform 0.25s ease; }
     .media-swipe-card:hover { transform: translateY(-2px); }
     .media-swipe-card img { width: 100%; height: 100%; object-fit: contain; border-radius: 6px; box-shadow: none; background: transparent; mix-blend-mode: multiply; display: block; }
     .guarantee-icon { width: 56px; height: 56px; border-radius: 50%; border: 2px dashed rgba(201,168,76,0.35); margin: 0 auto 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: var(--gold); }
