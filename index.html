@@ -171,23 +171,18 @@
     .faq-item.active .faq-answer-wrapper { grid-template-rows: 1fr; }
     .faq-item.active .faq-answer-text { opacity: 1; transition-delay: 0.2s; }
 
-    /* --- Media & Proof Carousel --- */
-    .carousel-section { width: 100vw; max-width: 100%; overflow: hidden; padding: 10px 0; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); position: relative; }
-    .carousel-track { display: flex; width: max-content; gap: 16px; padding: 0 12px; animation: scrollCarousel 20s linear infinite; }
-    .carousel-section:hover .carousel-track { animation-play-state: paused; }
-    .carousel-card { flex-shrink: 0; height: 260px; width: max-content; background: transparent; border-radius: 8px; display: flex; align-items: center; justify-content: center; overflow: hidden; box-shadow: 0 5px 20px rgba(107,45,62,0.1); }
-    .carousel-card img { height: 100%; width: auto; object-fit: contain; background-color: #fff; border-radius: 8px; display: block; }
-    @keyframes scrollCarousel {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(calc(-50% - 12px)); }
-    }
-
-    .media-grid { display: grid; grid-template-columns: 1fr; gap: 16px; width: 100%; margin: 0 auto; }
-    @media (min-width: 768px) { .media-grid { grid-template-columns: 1fr 1fr 1fr; } }
-    .media-card { background-color: rgba(246,244,240,0.85); border: 1px solid rgba(107,45,62,0.12); border-radius: 6px; padding: 28px 24px; box-shadow: 0 4px 18px rgba(107,45,62,0.04); display: flex; flex-direction: column; justify-content: space-between; gap: 16px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
-    .media-card:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(107,45,62,0.08); }
-    .media-headline { font-family: var(--serif); font-size: 1.25rem; font-weight: 600; color: var(--text-primary); line-height: 1.35; }
-    .media-logo { font-size: 10px; text-transform: uppercase; font-weight: 600; color: var(--rose-mid); letter-spacing: 0.1em; border-top: 1px dashed rgba(107,45,62,0.15); padding-top: 14px; margin-top: 10px; }
+    /* --- Interactive Swipe Carousels (Media & Proof) --- */
+    .swipe-carousel-wrap { width: 100vw; max-width: 100%; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); position: relative; }
+    .swipe-carousel { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scroll-behavior: smooth; gap: 16px; padding: 10px 5% 30px; -ms-overflow-style: none; scrollbar-width: none; align-items: stretch; }
+    .swipe-carousel::-webkit-scrollbar { display: none; }
+    
+    .carousel-card { scroll-snap-align: center; flex: 0 0 76%; max-width: 280px; height: auto; background: transparent; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .carousel-card img { width: 100%; height: auto; max-height: 480px; object-fit: contain; background-color: transparent; border-radius: 8px; display: block; box-shadow: 0 5px 20px rgba(107,45,62,0.1); }
+    
+    .media-swipe-card { scroll-snap-align: center; flex: 0 0 88%; max-width: 360px; background-color: #FAFAFA; border-radius: 18px; border: 3px solid rgba(107,45,62,0.03); box-shadow: 0 12px 32px rgba(107,45,62,0.06); padding: 24px 20px 20px; display: flex; flex-direction: column; gap: 16px; height: auto; }
+    .media-swipe-card img { width: 100%; height: auto; object-fit: contain; border-radius: 6px; box-shadow: 0 2px 10px rgba(0,0,0,0.03); background: #fff; }
+    .media-swipe-headline { font-family: var(--serif); font-size: 1.25rem; font-weight: 600; color: var(--text-primary); line-height: 1.35; text-align: center; }
+    .media-swipe-logo { margin-top: auto; font-size: 10px; text-transform: uppercase; font-weight: 600; color: var(--text-secondary); letter-spacing: 0.1em; text-align: center; padding-top: 14px; border-top: 1px dashed rgba(107,45,62,0.15); }
     .guarantee-icon { width: 56px; height: 56px; border-radius: 50%; border: 2px dashed rgba(201,168,76,0.35); margin: 0 auto 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: var(--gold); }
 
     footer { padding: 48px 0 32px; background-color: var(--dark-deep); }
@@ -615,20 +610,16 @@
     </div>
     <div class="sp-md"></div>
 
-    <div class="carousel-section">
-      <div class="carousel-track">
-        <!-- Set 1 -->
+    <div class="swipe-carousel-wrap">
+      <div class="swipe-carousel js-swipe-carousel">
         <div class="carousel-card"><img src="foto%20depoimento/52c577e8-55ca-4fe0-9b9e-92ef529fe3ab-_1_.webp" alt="Depoimento 1" loading="lazy"></div>
         <div class="carousel-card"><img src="foto%20depoimento/539dc6bb-e3c0-4c60-94fb-e65fd7eed0ae-_1_.webp" alt="Depoimento 2" loading="lazy"></div>
         <div class="carousel-card"><img src="foto%20depoimento/70312aff-a94e-46e4-9ca0-af4725cb4544-_1_-_1_.webp" alt="Depoimento 3" loading="lazy"></div>
         <div class="carousel-card"><img src="foto%20depoimento/a4f0494e-b9fd-481c-8478-2c21e60968de-_1_.webp" alt="Depoimento 4" loading="lazy"></div>
         <div class="carousel-card"><img src="foto%20depoimento/b718eb78-256a-460c-a47c-53a251ae857f.jpg" alt="Depoimento 5" loading="lazy"></div>
-        <!-- Set 2 for infinite loop -->
+        <!-- Duplas para ilusão infinita na rolagem natural -->
         <div class="carousel-card"><img src="foto%20depoimento/52c577e8-55ca-4fe0-9b9e-92ef529fe3ab-_1_.webp" alt="Depoimento 1" loading="lazy"></div>
         <div class="carousel-card"><img src="foto%20depoimento/539dc6bb-e3c0-4c60-94fb-e65fd7eed0ae-_1_.webp" alt="Depoimento 2" loading="lazy"></div>
-        <div class="carousel-card"><img src="foto%20depoimento/70312aff-a94e-46e4-9ca0-af4725cb4544-_1_-_1_.webp" alt="Depoimento 3" loading="lazy"></div>
-        <div class="carousel-card"><img src="foto%20depoimento/a4f0494e-b9fd-481c-8478-2c21e60968de-_1_.webp" alt="Depoimento 4" loading="lazy"></div>
-        <div class="carousel-card"><img src="foto%20depoimento/b718eb78-256a-460c-a47c-53a251ae857f.jpg" alt="Depoimento 5" loading="lazy"></div>
       </div>
     </div>
     <div class="sp-lg"></div>
@@ -638,18 +629,29 @@
     </div>
     <div class="sp-md"></div>
 
-    <div class="media-grid">
-      <div class="media-card reveal" data-delay="1">
-        <h3 class="media-headline">Noivas reduzem custos do casamento em até 40% com novo método estratégico</h3>
-        <div class="media-logo">[LOGO DO PORTAL / REVISTA / BLOG]</div>
-      </div>
-      <div class="media-card reveal" data-delay="2">
-        <h3 class="media-headline">Planejamento inteligente vira tendência entre casais que querem casar sem dívidas</h3>
-        <div class="media-logo">[LOGO DO PORTAL / REVISTA / BLOG]</div>
-      </div>
-      <div class="media-card reveal" data-delay="3">
-        <h3 class="media-headline">Especialistas apontam estratégia financeira como fator decisivo para casamentos sustentáveis</h3>
-        <div class="media-logo">[LOGO DO PORTAL / REVISTA / BLOG]</div>
+    <div class="swipe-carousel-wrap">
+      <div class="swipe-carousel js-swipe-carousel reveal">
+        <div class="media-swipe-card">
+          <h3 class="media-swipe-headline">Noivas reduzem custos do casamento em até 40% com novo método estratégico</h3>
+          <img src="foto%20manchete/689ed1e2-e90f-4781-88d2-fc92ce951f2f.jpg" alt="Matéria da revista 1">
+          <div class="media-swipe-logo">[LOGO EXAME / UOL / VOGUE]</div>
+        </div>
+        <div class="media-swipe-card">
+          <h3 class="media-swipe-headline">Planejamento inteligente vira tendência entre casais que querem casar sem dívidas</h3>
+          <img src="foto%20manchete/88b2c57e-5693-4c48-9675-bb7f9c337acf.jpg" alt="Matéria da revista 2">
+          <div class="media-swipe-logo">[PORTAL NOIVAS BR / CASAR.COM]</div>
+        </div>
+        <div class="media-swipe-card">
+          <h3 class="media-swipe-headline">Especialistas apontam estratégia financeira como fator decisivo para casamentos sustentáveis</h3>
+          <img src="foto%20manchete/a5053f99-f18c-44e5-a0c5-7e939082317f.jpg" alt="Matéria da revista 3">
+          <div class="media-swipe-logo">[REVISTA INESQUECÍVEL CASAMENTO]</div>
+        </div>
+        <!-- Duplicatas para o JS loop suave -->
+        <div class="media-swipe-card">
+          <h3 class="media-swipe-headline">Noivas reduzem custos do casamento em até 40% com novo método estratégico</h3>
+          <img src="foto%20manchete/689ed1e2-e90f-4781-88d2-fc92ce951f2f.jpg" alt="Matéria da revista 1">
+          <div class="media-swipe-logo">[LOGO EXAME / UOL / VOGUE]</div>
+        </div>
       </div>
     </div>
     <div class="sp-lg"></div>
@@ -986,6 +988,44 @@
         var isActive = parent.classList.contains('active');
         document.querySelectorAll('.faq-item').forEach(function(item) { item.classList.remove('active'); });
         if (!isActive) { parent.classList.add('active'); }
+      });
+    });
+
+    /* ── Autoplay Scroll-Snap Carousels ──────────────── */
+    document.querySelectorAll('.js-swipe-carousel').forEach(function(carousel) {
+      var isPaused = false;
+      var autoplayTimer;
+
+      function advance() {
+        if (isPaused) return;
+        var children = carousel.children;
+        if (children.length === 0) return;
+        
+        var firstItem = children[0];
+        var gap = 16;
+        var itemWidth = firstItem.offsetWidth + gap;
+        var currentScroll = carousel.scrollLeft;
+        
+        var nextTarget = currentScroll + itemWidth;
+        
+        // Loop back logic
+        if (nextTarget + carousel.clientWidth >= carousel.scrollWidth + gap) {
+          nextTarget = 0;
+        }
+        
+        carousel.scrollTo({ left: nextTarget, behavior: 'smooth' });
+      }
+
+      // Smooth switch every 4.2 seconds
+      autoplayTimer = setInterval(advance, 4200);
+
+      // Pause completely the moment the user interacts
+      var pauseEvents = ['touchstart', 'pointerdown', 'wheel'];
+      pauseEvents.forEach(function(evt) {
+        carousel.addEventListener(evt, function() {
+          isPaused = true;
+          clearInterval(autoplayTimer);
+        }, { passive: true });
       });
     });
 
