@@ -178,12 +178,12 @@
     .swipe-carousel { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scroll-behavior: smooth; gap: 16px; padding: 10px 5% 30px; -ms-overflow-style: none; scrollbar-width: none; align-items: stretch; }
     .swipe-carousel::-webkit-scrollbar { display: none; }
     
-    .carousel-card { scroll-snap-align: center; flex: 0 0 76%; max-width: 280px; height: 420px; background: #FFF; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 12px; box-shadow: 0 6px 24px rgba(107,45,62,0.05); padding: 8px; }
+    .carousel-card { scroll-snap-align: center; flex: 0 0 76%; max-width: 280px; height: 320px; background: linear-gradient(145deg, #ffffff, #fdfbf9); display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 12px; box-shadow: 0 10px 24px rgba(107,45,62,0.06); padding: 8px; }
     .carousel-card img { width: 100%; height: 100%; object-fit: contain; background-color: transparent; border-radius: 6px; display: block; box-shadow: none; }
     
-    .media-swipe-card { scroll-snap-align: center; flex: 0 0 74%; max-width: 250px; background-color: #FAFAFA; border-radius: 12px; border: 3px solid rgba(107,45,62,0.03); box-shadow: 0 8px 24px rgba(107,45,62,0.06); padding: 8px; display: flex; align-items: center; justify-content: center; height: auto; transition: transform 0.25s ease; }
+    .media-swipe-card { scroll-snap-align: center; flex: 0 0 74%; max-width: 250px; background-color: #FAFAFA; background: linear-gradient(145deg, #ffffff, #faf8f5); border-radius: 12px; border: 1px solid rgba(107,45,62,0.03); box-shadow: 0 8px 24px rgba(107,45,62,0.06); padding: 8px; display: flex; align-items: center; justify-content: center; height: 320px; transition: transform 0.25s ease; }
     .media-swipe-card:hover { transform: translateY(-2px); }
-    .media-swipe-card img { width: 100%; height: auto; max-height: 380px; object-fit: contain; border-radius: 6px; box-shadow: none; background: #fff; display: block; }
+    .media-swipe-card img { width: 100%; height: 100%; object-fit: contain; border-radius: 6px; box-shadow: none; background: transparent; mix-blend-mode: multiply; display: block; }
     .guarantee-icon { width: 56px; height: 56px; border-radius: 50%; border: 2px dashed rgba(201,168,76,0.35); margin: 0 auto 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: var(--gold); }
 
     footer { padding: 48px 0 32px; background-color: var(--dark-deep); }
@@ -618,9 +618,17 @@
         <div class="carousel-card"><img src="foto%20depoimento/70312aff-a94e-46e4-9ca0-af4725cb4544-_1_-_1_.webp" alt="Depoimento 3" loading="lazy"></div>
         <div class="carousel-card"><img src="foto%20depoimento/a4f0494e-b9fd-481c-8478-2c21e60968de-_1_.webp" alt="Depoimento 4" loading="lazy"></div>
         <div class="carousel-card"><img src="foto%20depoimento/b718eb78-256a-460c-a47c-53a251ae857f.jpg" alt="Depoimento 5" loading="lazy"></div>
-        <!-- Duplas para ilusão infinita na rolagem natural -->
+        <!-- Clones infinitos adicionais para forçar o scroll horizontal perfeito nas maiores telas Desktop -->
         <div class="carousel-card"><img src="foto%20depoimento/52c577e8-55ca-4fe0-9b9e-92ef529fe3ab-_1_.webp" alt="Depoimento 1" loading="lazy"></div>
         <div class="carousel-card"><img src="foto%20depoimento/539dc6bb-e3c0-4c60-94fb-e65fd7eed0ae-_1_.webp" alt="Depoimento 2" loading="lazy"></div>
+        <div class="carousel-card"><img src="foto%20depoimento/70312aff-a94e-46e4-9ca0-af4725cb4544-_1_-_1_.webp" alt="Depoimento 3" loading="lazy"></div>
+        <div class="carousel-card"><img src="foto%20depoimento/a4f0494e-b9fd-481c-8478-2c21e60968de-_1_.webp" alt="Depoimento 4" loading="lazy"></div>
+        <div class="carousel-card"><img src="foto%20depoimento/b718eb78-256a-460c-a47c-53a251ae857f.jpg" alt="Depoimento 5" loading="lazy"></div>
+        <div class="carousel-card"><img src="foto%20depoimento/52c577e8-55ca-4fe0-9b9e-92ef529fe3ab-_1_.webp" alt="Depoimento 1" loading="lazy"></div>
+        <div class="carousel-card"><img src="foto%20depoimento/539dc6bb-e3c0-4c60-94fb-e65fd7eed0ae-_1_.webp" alt="Depoimento 2" loading="lazy"></div>
+        <div class="carousel-card"><img src="foto%20depoimento/70312aff-a94e-46e4-9ca0-af4725cb4544-_1_-_1_.webp" alt="Depoimento 3" loading="lazy"></div>
+        <div class="carousel-card"><img src="foto%20depoimento/a4f0494e-b9fd-481c-8478-2c21e60968de-_1_.webp" alt="Depoimento 4" loading="lazy"></div>
+        <div class="carousel-card"><img src="foto%20depoimento/b718eb78-256a-460c-a47c-53a251ae857f.jpg" alt="Depoimento 5" loading="lazy"></div>
       </div>
     </div>
     <div class="sp-lg"></div>
@@ -632,19 +640,18 @@
 
     <div class="swipe-carousel-wrap">
       <div class="swipe-carousel js-swipe-carousel reveal">
-        <div class="media-swipe-card">
-          <img src="foto%20manchete/689ed1e2-e90f-4781-88d2-fc92ce951f2f.jpg" alt="Matéria da revista 1" loading="lazy">
-        </div>
-        <div class="media-swipe-card">
-          <img src="foto%20manchete/88b2c57e-5693-4c48-9675-bb7f9c337acf.jpg" alt="Matéria da revista 2" loading="lazy">
-        </div>
-        <div class="media-swipe-card">
-          <img src="foto%20manchete/a5053f99-f18c-44e5-a0c5-7e939082317f.jpg" alt="Matéria da revista 3" loading="lazy">
-        </div>
-        <!-- Duplicata para o JS loop suave infinito -->
-        <div class="media-swipe-card">
-          <img src="foto%20manchete/689ed1e2-e90f-4781-88d2-fc92ce951f2f.jpg" alt="Matéria da revista 1" loading="lazy">
-        </div>
+        <!-- Set 1 -->
+        <div class="media-swipe-card"><img src="foto%20manchete/689ed1e2-e90f-4781-88d2-fc92ce951f2f.jpg" alt="Matéria da revista 1" loading="lazy"></div>
+        <div class="media-swipe-card"><img src="foto%20manchete/88b2c57e-5693-4c48-9675-bb7f9c337acf.jpg" alt="Matéria da revista 2" loading="lazy"></div>
+        <div class="media-swipe-card"><img src="foto%20manchete/a5053f99-f18c-44e5-a0c5-7e939082317f.jpg" alt="Matéria da revista 3" loading="lazy"></div>
+        <!-- Set 2 -->
+        <div class="media-swipe-card"><img src="foto%20manchete/689ed1e2-e90f-4781-88d2-fc92ce951f2f.jpg" alt="Matéria da revista 1" loading="lazy"></div>
+        <div class="media-swipe-card"><img src="foto%20manchete/88b2c57e-5693-4c48-9675-bb7f9c337acf.jpg" alt="Matéria da revista 2" loading="lazy"></div>
+        <div class="media-swipe-card"><img src="foto%20manchete/a5053f99-f18c-44e5-a0c5-7e939082317f.jpg" alt="Matéria da revista 3" loading="lazy"></div>
+        <!-- Set 3 para cobrir monitores 4K Inteiros -->
+        <div class="media-swipe-card"><img src="foto%20manchete/689ed1e2-e90f-4781-88d2-fc92ce951f2f.jpg" alt="Matéria da revista 1" loading="lazy"></div>
+        <div class="media-swipe-card"><img src="foto%20manchete/88b2c57e-5693-4c48-9675-bb7f9c337acf.jpg" alt="Matéria da revista 2" loading="lazy"></div>
+        <div class="media-swipe-card"><img src="foto%20manchete/a5053f99-f18c-44e5-a0c5-7e939082317f.jpg" alt="Matéria da revista 3" loading="lazy"></div>
       </div>
     </div>
     <div class="sp-lg"></div>
